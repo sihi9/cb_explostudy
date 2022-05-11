@@ -1,0 +1,42 @@
+{
+  "name": "search-engine",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@meilisearch/instant-meilisearch": "^0.7.1",
+    "algoliasearch": "^4.13.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "react-instantsearch-dom": "^6.24.3",
+    "react-scripts": "^5.0.1",
+    "survey-core": "^1.9.29",
+    "survey-react-ui": "^1.9.29",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "all": "react-scripts build && (node server.js)",
+    "server": "node server.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
