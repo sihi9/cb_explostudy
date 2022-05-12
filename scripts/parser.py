@@ -7,6 +7,7 @@ import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 
@@ -47,7 +48,7 @@ def crawl():
     # make a new Chrome-based webdriver
     chrome_options = Options()
     chrome_options.add_argument("--headless")
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Chrome(ChromeDriverManager().install())
     # Go to home-page and click login link
     driver.get(url)
     time.sleep(2) # load iframe
@@ -183,11 +184,12 @@ def crawl():
   return json
 
 def addNewEntry(newEntry):
-  file = openFile()
-  allEntries = getJsonFromFile(file)
-  allEntries.append(newEntry)
-  writeToFile(file, allEntries)
-  closeFile(file)
+  print(newEntry["story"])
+  #file = openFile()
+  #allEntries = getJsonFromFile(file)
+  #allEntries.append(newEntry)
+  #writeToFile(file, allEntries)
+  #closeFile(file)
 
 def readEntry():
   json = {

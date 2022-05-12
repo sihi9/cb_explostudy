@@ -8,7 +8,7 @@ export default function ResultView(props){
   return(
    
     <div className="searchResult"  key={id} onClick={() => { props.onResultClicked(title, lead, story, position)}} >
-      <h2 className="resultHeading">{title}</h2>
+      <h1 className="resultHeading">{title}</h1>
       <p className="resultLead">{lead}</p>
     </div>
   /*

@@ -12,9 +12,14 @@ import MySearchBox from './MySearchBox';
 import data from "../data.json"
 import "../logData"
 
-const searchClient = instantMeiliSearch(
-  "http://127.0.0.1:7700/"
+import "../config"
+import config from '../config';
+
+const meiliSearchClient = instantMeiliSearch(
+  "http://127.0.0.1:" + config.meiliSearchPort + "/", 
+  config.apiKey
 );
+
 
 const demoSearchClient = instantMeiliSearch(
   'https://integration-demos.meilisearch.com',
@@ -26,10 +31,11 @@ export default function MySearchProvider(props){
   return (
     <div className="ais-InstantSearch">
       <InstantSearch 
-        indexName="movies" 
-        searchClient={searchClient} 
-        searchState={props.searchState}
-        onSearchStateChange={props.onSearchStateChange}>
+        indexName="cb_articles" 
+        searchClient={meiliSearchClient} 
+        //searchState={props.searchState}
+        //onSearchStateChange={props.onSearchStateChange}
+        >
 
         <CustomSearchBox text={props.searchState.query}/>
         <CustomHits onResultClicked={props.onResultClicked}/>
