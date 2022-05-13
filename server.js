@@ -26,27 +26,13 @@ app.post('/log', function(req, res) {
   logData.push(postData)
   fs.writeFile("./log.txt", JSON.stringify(logData), function(err) {
     if(err) {
-        return console.log(err);
+      res.statusCode(500);
+      return console.log(err);
     }
     console.log("LogData was saved!");
   }); 
   console.log(logData);
-});
-
-app.post('/log', function(req, res) {
- 
-  var postData = req.body;
-  postData = {id: logData.length, ...postData}
-  logData.push(postData)
-  fs.writeFile("./log.txt", JSON.stringify(logData), function(err) {
-    if(err) {
-      res.sendStatus(500)
-        return console.log(err);
-    }
-    console.log("LogData was saved!");
-  }); 
-  console.log(logData);
-  res.json()
+  res.statusCode(200);
 });
 
 app.post("/search*", function(req, res) {
@@ -56,7 +42,7 @@ app.post("/search*", function(req, res) {
   console.log("proxyUrl: " + proxy_url)
 
   var options = {
-    headers: {"Connection": "close"},
+    headers: req.headers,
     url: proxy_url,
     method: method,
     json: true,
