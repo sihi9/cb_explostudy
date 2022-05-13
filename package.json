@@ -1,6 +1,7 @@
 {
   "name": "search-engine",
   "version": "0.1.0",
+  "proxy":"http://localhost:7700",
   "private": true,
   "dependencies": {
     "@meilisearch/instant-meilisearch": "^0.7.1",
