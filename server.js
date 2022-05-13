@@ -40,12 +40,13 @@ app.post('/log', function(req, res) {
   logData.push(postData)
   fs.writeFile("./log.txt", JSON.stringify(logData), function(err) {
     if(err) {
+      res.sendStatus(500)
         return console.log(err);
     }
     console.log("LogData was saved!");
   }); 
   console.log(logData);
-  res.end("ok")
+  res.json()
 });
 
 app.post("/search*", function(req, res) {

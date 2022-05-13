@@ -33,7 +33,7 @@ export default function App() {
       {content === "postQ" && 
       <Questionnaire onSubmit={() => {
         setContent("outro")
-        fetch(`http://127.0.0.1:${global.config.port}/log`, {
+        fetch(`/log`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(global.logData),
