@@ -66,6 +66,10 @@ app.post("/search*", function(req, res) {
   function callback(error, response, data) {
     if (!error && response.statusCode === 200) {
       res.json(data)
+    } else {
+      console.log("could not fetch data from meilisearch")
+      console.log("error: " + JSON.stringify(error))
+      console.log("response: " + JSON.stringify(response))
     }
   }
 
