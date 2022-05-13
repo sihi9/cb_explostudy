@@ -26,13 +26,13 @@ app.post('/log', function(req, res) {
   logData.push(postData)
   fs.writeFile("./log.txt", JSON.stringify(logData), function(err) {
     if(err) {
-      res.statusCode(500);
+      res.status(500).end();
       return console.log(err);
     }
     console.log("LogData was saved!");
   }); 
   console.log(logData);
-  res.statusCode(200);
+  res.status(200).end();
 });
 
 app.post("/search*", function(req, res) {
@@ -40,9 +40,12 @@ app.post("/search*", function(req, res) {
   var proxy_url = "http://127.0.0.1:" + config.meiliSearchPort + req.originalUrl.replace("/search", "")
 
   console.log("proxyUrl: " + proxy_url)
-
   var options = {
-    headers: req.headers,
+    headers: 
+    {
+      "Connection": "close",
+      "authorization" : "Bearer " + config.apiKey
+    },
     url: proxy_url,
     method: method,
     json: true,
@@ -53,6 +56,7 @@ app.post("/search*", function(req, res) {
     if (!error && response.statusCode === 200) {
       res.json(data)
     } else {
+      res.status(500).end(res.body.message)
       console.log("could not fetch data from meilisearch")
       console.log("error: " + JSON.stringify(error))
       console.log("response: " + JSON.stringify(response))
