@@ -2,8 +2,5 @@ build/
 node_modules/
 scripts/
 src/config.js
-<<<<<<< HEAD
 log.txt
-=======
-log.txt
->>>>>>> 65e0ec7081a3da688dd38b8bad5d088bf73c50bc
+
