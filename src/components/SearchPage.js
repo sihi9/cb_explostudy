@@ -21,14 +21,18 @@ export default function SearchPage(props) {
     global.currentResult.endTime = Date.now();
     global.currentQuery.clickedResults.push(JSON.parse(JSON.stringify(global.currentResult)));
   }
-  const onResultClicked = (title, lead, story, index) => {
+  const onResultClicked = (id, title, lead, story, index, rating, source) => {
     setTitle(title)
     setLead(lead)
     setStory(story)
     setContent("result")
     global.currentResult.startTime = Date.now();
+    global.currentResult.id = id // unique identifier
     global.currentResult.title = title; // todo: exchange this with evaluation
     global.currentResult.index = index // index on the page
+    global.currentResult.rating = rating // rating of the article (-1, 0, 1)
+    global.currentResult.source = source // web link to the article
+
   }
 
   const searchFinished = () => {
