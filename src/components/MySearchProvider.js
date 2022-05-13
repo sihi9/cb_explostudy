@@ -16,7 +16,7 @@ import "../config"
 import config from '../config';
 
 const meiliSearchClient = instantMeiliSearch(
-  "http://127.0.0.1:" + config.meiliSearchPort + "/", 
+  "http://localhost:" + config.meiliSearchPort + "/", 
   config.apiKey
 );
 
