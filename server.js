@@ -18,14 +18,14 @@ var server = app.listen(config.port, function () {
    console.log("Example app listening at http://%s:%s", host, port)
 })
 
-let logData=[]
+var logData = require("./log.json")
 app.use(express.json())   // allows post request with header application/json
 app.post('/log', function(req, res) {
  
   var postData = req.body;
   postData = {id: logData.length, ...postData}
   logData.push(postData)
-  fs.writeFile("./log.txt", JSON.stringify(logData), function(err) {
+  fs.writeFile("./log.json", JSON.stringify(logData), function(err) {
     if(err) {
       res.status(500).end();
       return console.log(err);

@@ -57,13 +57,13 @@ div.infobox {
   
 }
 
-#left {
+.top-row #text {
   flex: 6 0;
   background: #ddd;
   height: 7em;
 }
 
-#right {
+.top-row #button {
   position: relative;
   flex: 1 0 1em;
   text-align: center;
@@ -82,15 +82,11 @@ div.button{
   transform: translate(0, -50%);
 }
 
-#right:hover {
+.top-row #button:hover {
   flex: 1 0 1em;
   text-align: center;
   background: rgb(41, 41, 41);
   color: white;
-}
-
-.result-page{
-  margin: 1em;
 }
 
 .resultHeading{
@@ -134,6 +130,16 @@ div.button{
   background: #ccc;
 }
 
+.center-field{
+  display: grid;
+  justify-content: center;
+}
+
+#result-page-content {
+  margin-top: 8px;
+  width: 740px;
+  margin-bottom: 100px;
+}
 h1 {
   margin: 0;
 }

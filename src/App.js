@@ -7,6 +7,7 @@ import Questionnaire from "./components/Questionnaire"
 import Introduction from './components/IntroductionPage';
 import SearchInitPage from './components/SearchInitPage';
 import Outro from './components/OutroPage';
+import ResultPage from './components/ResultPage';
 
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
     <div>
       {content === "introduction" && 
       <Introduction onSubmit={() => {setContent("preQ")}}/>}
+      
 
       {content === "preQ" && 
       <Questionnaire onSubmit={() => {setContent("searchInit")}} demographic={true}/>}

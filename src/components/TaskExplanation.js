@@ -7,12 +7,12 @@ export default function TaskExplanationprops(props){
   return (
 
     <div className="top-row">
-      <div id="left">
+      <div id="text">
         <div className="sv-page sv-body__page" dangerouslySetInnerHTML={{__html: text}}>
         </div>
       </div>
 
-      <div id="right" onClick={props.onContinueClicked}>
+      <div id="button" onClick={props.onContinueClicked}>
         <div className="button">
           Meinungsbildung beenden {'>'}
         </div>
