@@ -3,4 +3,5 @@ node_modules/
 scripts/
 src/config.js
 log.txt
+log.json
 
