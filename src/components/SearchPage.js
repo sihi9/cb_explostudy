@@ -26,6 +26,7 @@ export default function SearchPage(props) {
     setLead(lead)
     setStory(story)
     setContent("result")
+    window.scrollTo(0, 0)
     global.currentResult.startTime = Date.now();
     global.currentResult.id = id // unique identifier
     global.currentResult.title = title; // todo: exchange this with evaluation
