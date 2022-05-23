@@ -8,12 +8,13 @@ export default function Introduction(props){
   mein Name ist Simon Hitzginger, und ich verfasse derzeit meine Bachelorarbeit für mein Informatikstudium.
   Dazu würde ich dich bitten, dir die Zeit zu nehmen, um an dieser Studie teilzunehmen. 
   Am Anfang der Studie wirst du gebeten, einige Fragen zu beantworten. Anschließend bekommst du die Möglichkeit,
-  eine Datenbank mit verschiedenen Zeitungsartikeln zum Thema "Legalisierung von Cannabis" zu durchsuchen.
+  eine Datenbank mit verschiedenen Zeitungsartikeln zum Thema <strong>"Legalisierung von Cannabis"</strong> zu durchsuchen.
   Bitte nutze diese Gelegenheit, folgende Frage möglichst gewissenhaft beantworten zu können:
-    <p>"Sollte THC-haltiges Cannabis in Österreich legalisiert werden?" </p>
+    <p><strong>"Sollte THC-haltiges Cannabis in Österreich legalisiert werden?" </strong></p>
   Abschließend werden dir nochmals einige Fragen gestellt.
+  Wenn in den folgenden Fragen Cannabis erwähnt wird, ist dabei immer <strong>THC-haltiges Cannabis</strong> gemeint, welches in Österreich für Privatkonsum verboten ist. <br>
   Für den Erfolg der Studie ist es wichtig, dass du dir die nötige Zeit nimmst und alle Fragen beantwortest.<br>
-  Benütze außerdem bitte keinesfalls die Vor-, Zurück- und Neu-Laden-Knöpfe deines Webbrowsers, da ansonsten deine Daten nicht richtig aufgezeichnet werden!
+  Benütze außerdem bitte <strong>keinesfalls</strong> die Vor-, Zurück- und Neu-Laden-Knöpfe deines Webbrowsers, da ansonsten deine Daten nicht richtig aufgezeichnet werden!
   <br>
   Vielen Dank für deine Teilnahme!`
 

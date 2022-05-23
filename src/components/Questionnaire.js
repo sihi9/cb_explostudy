@@ -99,7 +99,7 @@ export default function Questionnaire(props){
         ],
         "rows": [
           {
-            "value": "affordable",
+            "value": "desire",
             "text": "Ich würde gerne öfter legal Cannabis konsumieren"
           },
           {
@@ -108,16 +108,29 @@ export default function Questionnaire(props){
           },
           {
             "value": "alcohol comparison",
-            "text": "Alkohol und Cannabis sollten gleichermaßen behandelt werden"
+            "text": "Ich finde, Alkohol und Cannabis sollten gleichermaßen behandelt werden"
           },
           {
             "value": "accessability",
-            "text": "Es ist leicht, an Cannabis zu kommen"
+            "text": "Ich glaube es wäre leicht, Cannabis zu kaufen"
           }, 
           {
-            "value": "accessability",
+            "value": "economic",
             "text": "Ich glaube, eine Legalisierung von Cannabis würde wirtschaftliche Vorteile bringen"
-          }
+          },
+          {
+            "value": "generalisation",
+            "text": "Ich finde, es sollten alle Drogen verboten werden"
+          },
+          {
+            "value": "health",
+            "text": "Ich finde, Cannabis ist gesundheitlich zu gefährlich, um legalisiert zu werden"
+          },
+          {
+            "value": "medizine",
+            "text": "Ich unterstütze den Einsatz von Cannabis für medizinische Zwecke, nicht aber für den privaten Konsum"
+          },
+          
         ]
       }
     ]
