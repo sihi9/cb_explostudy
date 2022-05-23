@@ -22,10 +22,12 @@ var logData = require("./log.json")
 app.use(express.json())   // allows post request with header application/json
 app.post('/log', function(req, res) {
  
+  console.log("dirname: " + __dirname)
+  console.log("./: " + process.cwd())
   var postData = req.body;
   postData = {id: logData.length, ...postData}
   logData.push(postData)
-  fs.writeFile("./log.json", JSON.stringify(logData), function(err) {
+  fs.writeFile(__dirname + "/log.json", JSON.stringify(logData), function(err) {
     if(err) {
       res.status(500).end();
       return console.log(err);
