@@ -8,7 +8,7 @@ export default function Outro(props){
         <b>Vielen Dank für deine Teilnahme!</b>
       </p>
       <p> Du hast die Studie erfolgreich beendet und kannst nun jederzeit dieses Fenster schließen</p>
-      <p> Sollte es dich interessieren, findest du im Weiteren noch Detail zur Studie. Natürlich kannst du mich auch jederzeit persönlich fragen oder unter simon.hitzginger@student.tugraz.at kontaktieren.</p>
+      <p> Sollte es dich interessieren, findest du im Weiteren noch Details zur Studie. Natürlich kannst du mich auch jederzeit persönlich fragen oder unter simon.hitzginger@student.tugraz.at kontaktieren.</p>
 
       <div className="infobox" >
         <b>Informationen zur Studie</b> <br/>
