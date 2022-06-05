@@ -107,14 +107,6 @@ export default function Questionnaire(props){
             "text": "Ich oder ein Bekannter hat bereits schlechte Erfahrung mit Cannabis gemacht"
           },
           {
-            "value": "alcohol comparison",
-            "text": "Ich finde, Alkohol und Cannabis sollten gleichermaßen behandelt werden"
-          },
-          {
-            "value": "accessability",
-            "text": "Ich glaube es wäre leicht, Cannabis zu kaufen"
-          }, 
-          {
             "value": "economic",
             "text": "Ich glaube, eine Legalisierung von Cannabis würde wirtschaftliche Vorteile bringen"
           },
